@@ -29,7 +29,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
   marginTop:'45px',
-    backgroundImage: 'linear-gradient(0deg, rgba(245, 245, 220, 1), rgba(255, 255, 255, 1))',
+    backgroundImage: 'linear-gradient(to top, #fbfafa, #ffffff)',
     alignItems: 'center',
     justifyContent: 'center',
     padding:'10px'
