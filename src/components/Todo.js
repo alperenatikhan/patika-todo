@@ -86,14 +86,14 @@ return(
 <View style={{flexDirection:'row', justifyContent: 'space-between', marginTop:'5px',marginBottom:'5px'}}>
 
 
-<TouchableOpacity onPress={handleCompleted}> <Text style={styles.completeButton}> {item.isCompleted? 'Incomplete': ' Complete '} </Text>
+<TouchableOpacity style={styles.miniButtonContainer} onPress={handleCompleted}> <Text style={styles.completeButton}> {item.isCompleted? 'Incomplete': ' Complete '} </Text>
 </TouchableOpacity>
 
-<TouchableOpacity onPress={updateTodo}> <Text style={styles.updateButton}> Edit </Text>
+<TouchableOpacity style={styles.miniButtonContainer} onPress={updateTodo}> <Text style={styles.updateButton}>Edit</Text>
 </TouchableOpacity>
 
 
-<TouchableOpacity onPress={deleteTodo}> <Text style={styles.deleteButton}> Delete </Text>
+<TouchableOpacity style={styles.miniButtonContainer} onPress={deleteTodo}> <Text style={styles.deleteButton}> Delete </Text>
 </TouchableOpacity>
 
 
@@ -106,7 +106,7 @@ return(
 <View style={{flexDirection:'row', justifyContent: 'flex-end', marginTop:'10px'}}>
 
 
-<TouchableOpacity onPress={deleteTodo}> <Text style={styles.deleteButton}> Delete </Text>
+<TouchableOpacity style={styles.miniButtonContainer} onPress={deleteTodo}> <Text style={styles.deleteButton}> Delete </Text>
 </TouchableOpacity>
 
 
@@ -125,16 +125,17 @@ return(
 const styles= StyleSheet.create({
 
 
-deleteButton:{width: '50px',backgroundColor:'orangered',color:'whitesmoke'},
+deleteButton:{borderRadius:'5px',textAlign:'center',width: '50px',backgroundColor:'orangered',color:'whitesmoke'},
 todoContainer:{margin: '5px', flex:'1', flexDirection:'column',  border:'solid 2px lightgray', padding:'5px', borderRadius: '6px'},
-updateButton:{width: '50px',backgroundColor:'whitesmoke',color:'teal'},
+updateButton:{borderRadius:'5px',textAlign:'center',width: '50px',backgroundColor:'whitesmoke',color:'teal'},
 activeInput:{border:'2px solid orangered'},
 updateRow: {flex:'1', flexDirection:'row', justifyContent:'space-between', marginBottom:'5px'},
-confirmButton:{backgroundColor:'dodgerblue', color:'whitesmoke', padding:'5px', fontWeight:'bold'},
+confirmButton:{borderRadius:'5px',backgroundColor:'dodgerblue', color:'whitesmoke', padding:'5px', fontWeight:'bold'},
 completedText:{textDecorationLine:'line-through', textDecorationStyle: 'solid', color:'gray', fontSize:'18px', fontWeight:'bold'},
 defaultText:{color:'teal', fontWeight:'semi-bold', fontSize:'18px'},
-completeButton:{backgroundColor:'teal', color: 'whitesmoke'},
-timeText:{color:'gray', fontSize:'12px'}
+completeButton:{borderRadius:'5px',textAlign:'center',backgroundColor:'teal', color: 'whitesmoke'},
+timeText:{color:'gray', fontSize:'12px'},
+
 
 })
 
